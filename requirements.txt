@@ -1,0 +1,10 @@
+# AI Innovation Challenge Scorer Dependencies
+
+# Core application framework
+gradio>=4.0.0
+
+# OpenAI API for Whisper transcription
+openai>=1.0.0
+
+# Anthropic API for Claude scoring
+anthropic>=0.18.0
