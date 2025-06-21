@@ -38,7 +38,7 @@ def transcribe_and_correct(audio_path: str, title: str) -> str:
         """
         
         correction_response = anthropic_client.messages.create(
-            model="claude-3-sonnet-20240229",
+            model="claude-3-5-sonnet-20241022", # claude-sonnet-4-20250514
             max_tokens=2000,
             messages=[{"role": "user", "content": correction_prompt}]
         )
@@ -246,6 +246,4 @@ if __name__ == "__main__":
     app = create_interface()
     app.launch(
         share=True,  # Set to True if you want a public link
-        server_name="0.0.0.0",  # Allow external connections
-        server_port=7860
     )
